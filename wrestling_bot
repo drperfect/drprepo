@@ -1,0 +1,32 @@
+request.post({
+    url: "https://api.kik.com/v1/config",
+    auth: {
+        user: "<wrestling_bot>",
+        pass: "<9c66608d-9869-484d-96c3-4c9f137eec79>"
+    },
+    json: {
+        "webhook": "https://kolkrabbi.heroku.com/hooks/github", 
+        "features": {
+            "receiveReadReceipts": false, 
+            "receiveIsTyping": false, 
+            "manuallySendReadReceipts": false, 
+            "receiveDeliveryReceipts": false
+        }
+    }
+}, callback);
+let bot = new Bot({
+    username: 'wrestling_bot',
+    apiKey: '9c66608d-9869-484d-96c3-4c9f137eec79',
+    baseUrl: 'https://kolkrabbi.heroku.com/hooks/github'
+});
+
+bot.updateBotConfiguration();
+
+bot.onTextMessage((message) => {
+    message.reply(message.body);
+});
+
+// Set up your server and start listening
+let server = http
+    .createServer(bot.incoming())
+    .listen(process.env.PORT || 8080);
