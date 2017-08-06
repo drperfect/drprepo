@@ -1,8 +1,8 @@
 request.post({
     url: "https://api.kik.com/v1/config",
     auth: {
-        user: "<wrestling_bot>",
-        pass: "<9c66608d-9869-484d-96c3-4c9f137eec79>"
+        user: "<thewrestlingbot>",
+        pass: "<8f5bc919-c617-4796-9411-e887b94ac51f>"
     },
     json: {
         "webhook": "https://kolkrabbi.heroku.com/hooks/github", 
@@ -15,8 +15,8 @@ request.post({
     }
 }, callback);
 let bot = new Bot({
-    username: 'wrestling_bot',
-    apiKey: '9c66608d-9869-484d-96c3-4c9f137eec79',
+    username: 'thewrestlingbot',
+    apiKey: '8f5bc919-c617-4796-9411-e887b94ac51f',
     baseUrl: 'https://kolkrabbi.heroku.com/hooks/github'
 });
 
