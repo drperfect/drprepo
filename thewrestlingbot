@@ -27,6 +27,6 @@ bot.onTextMessage((message) => {
 });
 
 // Set up your server and start listening
-let server = http
+let server = https://kolkrabbi.heroku.com/hooks/github 
     .createServer(bot.incoming())
     .listen(process.env.PORT || 8080);
