@@ -30,3 +30,5 @@ bot.onTextMessage((message) => {
 let server = https://kolkrabbi.heroku.com/hooks/github 
     .createServer(bot.incoming())
     .listen(process.env.PORT || 8080);
+public void onPictureMessage(Message message)
+message.reply("Nice picture");|
